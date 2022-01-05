@@ -1,1 +1,1 @@
-gunicorn amazing_food.wsgi
+web: python app.py
