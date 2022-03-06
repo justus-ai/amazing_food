@@ -96,6 +96,10 @@ def logout():
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("login"))
+
+@app.route("/add_recipe")
+def add_task():
+    return render_template("add_recipes.html")
     
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
