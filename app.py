@@ -97,9 +97,10 @@ def logout():
     session.pop("user")
     return redirect(url_for("login"))
 
-@app.route("/add_recipe")
+@app.route("/add_task")
 def add_task():
-    return render_template("add_recipes.html")
+    categories = mongo.db.categories.find().sort("category_recipe", 1)
+    return render_template("add_recipes.html", categories=categories)
     
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
