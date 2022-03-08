@@ -19,10 +19,10 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/get_tasks")
-def get_tasks():
-    tasks = list(mongo.db.tasks.find())
-    return render_template("recipe.html", tasks=tasks)
+@app.route("/get_recipes")
+def get_recipes():
+    recipes = list(mongo.db.recipes.find())
+    return render_template("recipe.html", recipes=recipes)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -98,11 +98,11 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_task", methods=["GET", "POST"])
-def add_task():
+@app.route("/add_recipe", methods=["GET", "POST"])
+def add_recipe():
     if request.method == "POST":
         is_urgent = "on" if request.form.get("is_urgent") else "off"
-        task = {
+        recipe = {
             "category_recipe": request.form.get("category_recipe"),
             "recipe_name": request.form.get("recipe_name"),
             "recipe_description": request.form.get("recipe_description"),
@@ -110,9 +110,9 @@ def add_task():
             "date_uploaded": request.form.get("due_date"),
             "created_by": session["user"]
         }
-        mongo.db.tasks.insert_one(task)
+        mongo.db.recipes.insert_one(recipe)
         flash("Recipe Successfully Added")
-        return redirect(url_for("get_tasks"))
+        return redirect(url_for("get_recipes"))
 
     categories = mongo.db.categories.find().sort("category_recipe", 1)
     return render_template("add_recipes.html", categories=categories)

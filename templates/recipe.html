@@ -2,20 +2,20 @@
 {% block content %}
 
     <ul class="collapsible">
-        {% for task in tasks %}
+        {% for recipe in recipes %}
         <li>
             <div class="collapsible-header white-text deep-orange darken-4 text-shadow">
                 <i class="fas fa-caret-down"></i>
-                <strong>{{ task.task_name }}</strong> : {{ task.due_date }}
-                {% if task.is_urgent == "on" %}
+                <strong>{{ recipe.recipe_name }}</strong> : {{ recipe.date_uploaded }}
+                {% if recipe.is_urgent == "on" %}
                     <i class="fas fa-exclamation-circle deep-orange-text text-lighten-2 tooltipped"
-                        data-position="right" data-tooltip="URGENT!"></i>
+                        data-position="right" data-tooltip="NEWEST!"></i>
                 {% endif %}
             </div>
             <div class="collapsible-body">
-                <strong>{{ task.category_name }}</strong>
-                <p>{{ task.task_description }}</p>
-                <p><em>by: {{ task.created_by }}</em></p>
+                <strong>{{ recipe.category_recipe }}</strong>
+                <p>{{ recipe.recipe_description }}</p>
+                <p><em>by: {{ recipe.created_by }}</em></p>
             </div>
         </li>
         {% endfor %}
