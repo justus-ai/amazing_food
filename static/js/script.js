@@ -15,14 +15,12 @@ $(document).ready(function () {
             done: "Select"
         }
     });
-});
 
-
-validateMaterializeSelect();
-function validateMaterializeSelect() {
-    let classValid = { "border-bottom": "1px solid #4caf50", "box-shadow": "0 1px 0 0 #4caf50" };
-    let classInvalid = { "border-bottom": "1px solid #f44336", "box-shadow": "0 1px 0 0 #f44336" };
-    if ($("select.validate").prop("required")) {
+    validateMaterializeSelect();
+    function validateMaterializeSelect() {
+        let classValid = { "border-bottom": "1px solid #4caf50", "box-shadow": "0 1px 0 0 #4caf50" };
+        let classInvalid = { "border-bottom": "1px solid #f44336", "box-shadow": "0 1px 0 0 #f44336" };
+        if ($("select.validate").prop("required")) {
         $("select.validate").css({ "display": "block", "height": "0", "padding": "0", "width": "0", "position": "absolute" });
     }
     $(".select-wrapper input.select-dropdown").on("focusin", function () {
@@ -46,3 +44,6 @@ function validateMaterializeSelect() {
     });
 }
 });
+
+
+
