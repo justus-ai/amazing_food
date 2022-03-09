@@ -1,108 +1,99 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+AMAZING FOOD.
+ This website is designed to be responsive and accessible on a range of devices, making it easy to navigate for potential food enthusiasts that would like to contribute, access and share interesting recipe ideas. 
 
-Welcome Justus marwa,
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+User Experience (UX)
+1.First Time Visitor Goals
+![Screenshot (362)](.png)
+As a First Time Visitor, one is greeted with a simple message of all recipes , a seach box to enter any v of a varity of key words to get one closer to their search interest and a reset button to go back to the home page if not found.
+a)Returning Visitor Goals
+1. The page has a register page that ia easy for a first time user to sign up.More optons are there after displayed, add , delete, edit recipe .These functions are available for only registered users.
+2. In the add recipe page, there is a further five categories:vegan , vegeterian, lactose-free, traditional and mratlovers cateogires where one can furthr categorise their recipe.
+3. There is a also  an nwest button at the bottom of the page to be activated if one feels that their recipe is a nwer version of a prexisting one .
+4. There is also a dapicker so that people who come on to the page can see when a particular recipe was uploaded.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+Admin page. 
+The admin user can login and has further options of adding , delteting and editing the categories section.
+Design
+Colour Scheme
+The two main colours on Amazing Food are  orange and white.
 
-## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+Mobile Wireframe - View
 
-`python3 -m http.server`
+Features
+Responsive on all device sizes
 
-A blue button should appear to click: _Make Public_,
+Interactive elements
 
-Another blue button should appear to click: _Open Browser_.
+Technologies Used
+Languages Used
+HTML5
+CSS3
+Frameworks, Libraries & Programs Used
+Bootstrap 4.4.1:
+Bootstrap was used to assist with the responsiveness and styling of the website.
+Hover.css:Fo the collapsible categories section,flashes for h4 throught the website, text shadow and the btn small.
+Font Awesome:
+Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
+jQuery:
+jQuery came with Bootstrap to make the navbar responsive but was also used for the smooth scroll function in JavaScript.
+Git
+Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+GitHub:
+GitHub is used to store the projects code after being pushed from Git.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Testing
+The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
-A blue button should appear to click: _Make Public_,
+W3C Markup Validator - Results 
+W3C CSS Validator - Results https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Famazing-food.herokuapp.com%2Fadd_recipe&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en
 
-Another blue button should appear to click: _Open Browser_.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+Deployment
+GitHub Pages
+The project was deployed to GitHub Pages using the following steps...
 
-To log into the Heroku toolbelt CLI:
+Log in to GitHub and locate the GitHub Repository
+At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
+Alternatively Click Here for a GIF demonstrating the process starting from Step 2.
+Scroll down the Settings page until you locate the "GitHub Pages" Section.
+Under "Source", click the dropdown called "None" and select "Master Branch".
+The page will automatically refresh.
+Scroll back down through the page to locate the now published site link in the "GitHub Pages" section.
+Forking the GitHub Repository
+By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+Log in to GitHub and locate the GitHub Repository
+At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
+You should now have a copy of the original repository in your GitHub account.
+Making a Local Clone
+Log in to GitHub and locate the GitHub Repository
+Under the repository name, click "Clone or download".
+To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+Open Git Bash
+Change the current working directory to the location where you want the cloned directory to be made.
+Type git clone, and then paste the URL you copied in Step 3.
+$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+Press Enter. Your local clone will be created.
+$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+> Cloning into `CI-Clone`...
+> remote: Counting objects: 10, done.
+> remote: Compressing objects: 100% (8/8), done.
+> remove: Total 10 (delta 1), reused 10 (delta 1)
+> Unpacking objects: 100% (10/10), done.
+Click Here to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+Credits
+Code
+The majority f the code is from the instrcutons video by tim_ci of code institute
 
-------
+Bootstrap4: Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
 
-## Release History
+Content
+All content was written by Justus Mwita Marwa but very much under the instruction and tutelage of the code institute videos of the get tasks project
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+Acknowledgements
+My Mentor for continuous helpful feedback.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+Tutor support at Code Institute for their support.
