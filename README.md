@@ -4,25 +4,42 @@ AMAZING FOOD.
 
 User Experience (UX)
 1.First Time Visitor Goals
-![Screenshot (362)](.png)
+![Screenshot (695)](https://user-images.githubusercontent.com/83753891/157437468-049f3cfa-e1ec-4b6f-bc3e-62a08b1d6b41.png)
+
 As a First Time Visitor, one is greeted with a simple message of all recipes , a seach box to enter any v of a varity of key words to get one closer to their search interest and a reset button to go back to the home page if not found.
 a)Returning Visitor Goals
-1. The page has a register page that ia easy for a first time user to sign up.More optons are there after displayed, add , delete, edit recipe .These functions are available for only registered users.
-2. In the add recipe page, there is a further five categories:vegan , vegeterian, lactose-free, traditional and mratlovers cateogires where one can furthr categorise their recipe.
-3. There is a also  an nwest button at the bottom of the page to be activated if one feels that their recipe is a nwer version of a prexisting one .
-4. There is also a dapicker so that people who come on to the page can see when a particular recipe was uploaded.
+![Screenshot (697)](https://user-images.githubusercontent.com/83753891/157437835-c936c6c5-a5a4-4ea0-b5ae-d52729ce2146.png)
+
+1. The page has a register page that is easy for a first time user to sign up.More optons are there after displayed, add , delete, edit recipe .These functions are available for only registered users.
+2.![Screenshot (696)](https://user-images.githubusercontent.com/83753891/157437999-0a77c788-8b91-4a36-ba85-38fe5f6b78eb.png)
+
+3. In the add recipe page, there is a further five categories:vegan , vegeterian, lactose-free, traditional and mratlovers cateogires where one can further categorise their recipe.
+4. ![Screenshot (699)](https://user-images.githubusercontent.com/83753891/157438346-9f61ee47-4926-4579-90bc-b434bee87d6f.png)
+5. ![Screenshot (701)](https://user-images.githubusercontent.com/83753891/157438721-584fcbd3-e6dd-4034-b393-3b418277c8f7.png)
+
+
+5. There is a also  an newest button at the bottom of the page to be activated if one feels that their recipe is a newer version of prexisting one or a prevoiusly nonexistant recipe.
+6. There is also a datepicker so that people who come on to the page can see when a particular recipe was uploaded.
+7. ![Screenshot (700)](https://user-images.githubusercontent.com/83753891/157438453-6c8a72f5-348a-4053-a8a3-f6ac1760c8b6.png)
+
 
 Admin page. 
-The admin user can login and has further options of adding , delteting and editing the categories section.
+The admin user can login and has further options of adding , deleting and editing the categories section.
+![Screenshot (703)](https://user-images.githubusercontent.com/83753891/157438829-f8a6ed56-aa45-4467-bcbf-4c347d126daf.png)
+![Screenshot (704)](https://user-images.githubusercontent.com/83753891/157439100-b4fc3807-694e-4861-bed0-4bf0842fad0a.png)
+
+
 Design
 Colour Scheme
 The two main colours on Amazing Food are  orange and white.
 
-
-Mobile Wireframe - View
-
 Features
-Responsive on all device sizes
+Responsive on all device sizes, the below screenshot is of two pages shown in smaller screens but all pages are responsive.
+![Screenshot (692)](https://user-images.githubusercontent.com/83753891/157439268-c7598730-8a71-4d51-884b-d8765ace9054.png)
+
+There is also a repsonsive menu that turns into a hamburger iconin smallerscreens. On clicking the hamburger icon, it becomes a dropdown with all the functions intact:
+
+![Screenshot (707)](https://user-images.githubusercontent.com/83753891/157439410-a28c1e99-c51f-4a56-a3c5-6995e9bc4127.png)
 
 Interactive elements
 
@@ -86,7 +103,7 @@ Click Here to retrieve pictures for some of the buttons and more detailed explan
 
 Credits
 Code
-The majority f the code is from the instrcutons video by tim_ci of code institute
+The majority f the code is from the instructions videos by tim_ci of code institute as i followed keenly to come u with tie website as end result.
 
 Bootstrap4: Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
 
