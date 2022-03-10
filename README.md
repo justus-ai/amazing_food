@@ -4,38 +4,38 @@ AMAZING FOOD.
  This website is designed to be responsive and accessible on a range of devices, making it easy to navigate for potential food enthusiasts that would like to contribute, access and share interesting recipe ideas. 
 
 
-User Experience (UX)
+USER EXPERINECE (UX)
 1.First Time Visitor Goals
 ![Screenshot (695)](https://user-images.githubusercontent.com/83753891/157437468-049f3cfa-e1ec-4b6f-bc3e-62a08b1d6b41.png)
 
-As a First Time Visitor, one is greeted with a simple message of all recipes , a seach box to enter any v of a varity of key words to get one closer to their search interest and a reset button to go back to the home page if not found.
+As a First Time Visitor, one is greeted with a simple message of all recipes , a seach box to ente button.This is to beable enter a varity of key words to get one closer to their search interest and a reset button to go back to the home page if not found.
 a)Returning Visitor Goals
 ![Screenshot (697)](https://user-images.githubusercontent.com/83753891/157437835-c936c6c5-a5a4-4ea0-b5ae-d52729ce2146.png)
 
-1. The page has a register page that is easy for a first time user to sign up.More optons are there after displayed, add , delete, edit recipe .These functions are available for only registered users.
+1. The page has a register link that is easy for a first time user to sign up.More optons are thereafter displayed  add , delete, edit recipe .These functions are available for only registered users.
 2.![Screenshot (696)](https://user-images.githubusercontent.com/83753891/157437999-0a77c788-8b91-4a36-ba85-38fe5f6b78eb.png)
 
-3. In the add recipe page, there is a further five categories:vegan , vegeterian, lactose-free, traditional and mratlovers cateogires where one can further categorise their recipe.
+3. In the add recipe page, there are five furhter categories:vegan , vegeterian, lactose-free, traditional and meatlovers where one can further categorise their recipe.
 4. ![Screenshot (699)](https://user-images.githubusercontent.com/83753891/157438346-9f61ee47-4926-4579-90bc-b434bee87d6f.png)
 5. ![Screenshot (701)](https://user-images.githubusercontent.com/83753891/157438721-584fcbd3-e6dd-4034-b393-3b418277c8f7.png)
 
 
-5. There is a also  an newest button at the bottom of the page to be activated if one feels that their recipe is a newer version of prexisting one or a prevoiusly nonexistant recipe.
-6. There is also a datepicker so that people who come on to the page can see when a particular recipe was uploaded.
+5. There is a also  an newest button at the bottom of the page to be activated if one feels that their recipe is a newer version of a prexisting one or a prevoiusly nonexistant recipe.
+6. There is also a datepicker so that people who come on to the page to find recipes  can see when a particular recipe was uploaded.
 7. ![Screenshot (700)](https://user-images.githubusercontent.com/83753891/157438453-6c8a72f5-348a-4053-a8a3-f6ac1760c8b6.png)
 
 
-Admin page. 
+## Admin page. 
 The admin user can login and has further options of adding , deleting and editing the categories section.
 ![Screenshot (703)](https://user-images.githubusercontent.com/83753891/157438829-f8a6ed56-aa45-4467-bcbf-4c347d126daf.png)
 ![Screenshot (704)](https://user-images.githubusercontent.com/83753891/157439100-b4fc3807-694e-4861-bed0-4bf0842fad0a.png)
 
 
-Design
+# DESIGN
 Colour Scheme
 The two main colours on Amazing Food are  orange and white.
 
-Features
+# FEATURES
 Responsive on all device sizes, the below screenshot is of two pages shown in smaller screens but all pages are responsive.
 ![Screenshot (692)](https://user-images.githubusercontent.com/83753891/157439268-c7598730-8a71-4d51-884b-d8765ace9054.png)
 
