@@ -49,7 +49,7 @@ Techonologies used:
 MongoDB for back end
 Heroku for launching the website
 
-Languages Used
+# LANGUAGES USED
 HTML5
 CSS3
 Materialise
@@ -66,19 +66,19 @@ Git was used for version control by utilizing the Gitpod terminal to commit to G
 GitHub:
 GitHub is used to store the projects code after being pushed from Git.
 
-Testing
+# TESTING
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
 W3C CSS Validator - Results https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Famazing-food.herokuapp.com%2Fadd_recipe&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en
 devtools.No errors when i checked on devtools
 ![image](https://user-images.githubusercontent.com/83753891/157632768-046ccee6-f791-4fec-b32d-913b9c948b03.png)
-UNFIXED BUGS:
+# UNFIXED BUGS:
 none
-FEATURES LEFT TO IMPLEMENT:
+# FEATURES LEFT TO IMPLEMENT:
 In the future i would like to add a function where pictures alongside the recipe could be added when a user uploads the recipe.
 Also want ed to add the social media links at the bottom of ach page to link to facebook, instagram, pinterest and other social media to enrich UX.
 
-Deployment
+# DEPLOYMENT
 This Project was deployed to Heroku using the following steps, first i stalle dheroku from www.heroku.com and followed te following steps:
 
 1 . Create an account on https://heroku.com. This should be pretty straight forward. 2 . Install the Heroku CLI on your computer:
@@ -114,16 +114,16 @@ git push heroku master
 
 heroku open
 
-Credits
+# Credits
 Code
-The majority f the code is from the instructions videos by tim_ci of code institute as i followed keenly to come u with tie website as end result.
+The majority of the code is from the instructions videos by tim_ci of code institute as i followed keenly to come up with the  website as end result.
 
 Bootstrap4: Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
 
-Content
+# Content
 All content was written by Justus Mwita Marwa but very much under the instruction and tutelage of the code institute videos of the get tasks project
 
-Acknowledgements
+# Acknowledgements
 My Mentor for continuous helpful feedback.
 
 Tutor support at Code Institute for their support.
