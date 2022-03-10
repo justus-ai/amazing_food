@@ -1,4 +1,6 @@
 AMAZING FOOD.
+
+
  This website is designed to be responsive and accessible on a range of devices, making it easy to navigate for potential food enthusiasts that would like to contribute, access and share interesting recipe ideas. 
 
 
@@ -42,11 +44,15 @@ There is also a repsonsive menu that turns into a hamburger iconin smallerscreen
 ![Screenshot (707)](https://user-images.githubusercontent.com/83753891/157439410-a28c1e99-c51f-4a56-a3c5-6995e9bc4127.png)
 
 Interactive elements
+Techonologies used:
 
-Technologies Used
+MongoDB for back end
+Heroku for launching the website
+
 Languages Used
 HTML5
 CSS3
+Materialise
 Frameworks, Libraries & Programs Used
 Bootstrap 4.4.1:
 Bootstrap was used to assist with the responsiveness and styling of the website.
@@ -63,43 +69,50 @@ GitHub is used to store the projects code after being pushed from Git.
 Testing
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
-W3C Markup Validator - Results 
 W3C CSS Validator - Results https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Famazing-food.herokuapp.com%2Fadd_recipe&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en
-
+devtools.No errors when i checked on devtools
+![image](https://user-images.githubusercontent.com/83753891/157632768-046ccee6-f791-4fec-b32d-913b9c948b03.png)
+UNFIXED BUGS:
+none
+FEATURES LEFT TO IMPLEMENT:
+In the future i would like to add a function where pictures alongside the recipe could be added when a user uploads the recipe.
+Also want ed to add the social media links at the bottom of ach page to link to facebook, instagram, pinterest and other social media to enrich UX.
 
 Deployment
-GitHub Pages
-The project was deployed to GitHub Pages using the following steps...
+This Project was deployed to Heroku using the following steps, first i stalle dheroku from www.heroku.com and followed te following steps:
 
-Log in to GitHub and locate the GitHub Repository
-At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
-Alternatively Click Here for a GIF demonstrating the process starting from Step 2.
-Scroll down the Settings page until you locate the "GitHub Pages" Section.
-Under "Source", click the dropdown called "None" and select "Master Branch".
-The page will automatically refresh.
-Scroll back down through the page to locate the now published site link in the "GitHub Pages" section.
-Forking the GitHub Repository
-By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
+1 . Create an account on https://heroku.com. This should be pretty straight forward. 2 . Install the Heroku CLI on your computer:
+https://devcenter.heroku.com/articles/heroku-cli. Check that you have the heroku-cli installed by checking the version number in your terminal:
 
-Log in to GitHub and locate the GitHub Repository
-At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
-You should now have a copy of the original repository in your GitHub account.
-Making a Local Clone
-Log in to GitHub and locate the GitHub Repository
-Under the repository name, click "Clone or download".
-To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
-Open Git Bash
-Change the current working directory to the location where you want the cloned directory to be made.
-Type git clone, and then paste the URL you copied in Step 3.
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-Press Enter. Your local clone will be created.
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-> Cloning into `CI-Clone`...
-> remote: Counting objects: 10, done.
-> remote: Compressing objects: 100% (8/8), done.
-> remove: Total 10 (delta 1), reused 10 (delta 1)
-> Unpacking objects: 100% (10/10), done.
-Click Here to retrieve pictures for some of the buttons and more detailed explanations of the above process.
+heroku --version
+3 . Connect the Heroku CLI to your account by writing the following command in your terminal and follow the instructions on the command line:
+
+heroku login
+Use your credentials from the earlier account creation.
+
+Create the project
+1 . Create a new project, for example a simple express-server. You have to have a package.json and all your dependencies must be added to this package.json. Make sure of this otherwise the app will crash.
+
+2 . Heroku will look for a startup-script, this is by default npm start so make sure you have that in your package.json (assuming your script is called app.js):
+
+ "scripts": {
+    "start" : "node app.js"
+ }
+3 . You also have to make changes to the port, you can't hardcode a dev-port. But you can reference herokus port without knowing it by a special variabel. So add the following to your code:
+
+const port = process.env.PORT || 4000;
+When you upload to Heroku it will use the environment-port but when you are developing it will use the port 4000. Then reference this port in your app:
+
+app.listen(port);
+4 . Then create a remote heroku project, kinda like creating a git repository on GitHub. This will create a project on Heroku with a random name. If you want to name your app you have to supply your own name like heroku create project-name. The command below will just create a random name:
+
+heroku create
+5 . Push your app to Heroku like pushing to GitHub expect for origin you have heroku (you will see a wall of code).
+
+git push heroku master
+6 . Visit your newly create app by opening it via heroku:
+
+heroku open
 
 Credits
 Code
