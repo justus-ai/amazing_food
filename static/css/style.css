@@ -1,7 +1,7 @@
 body {
     min-height: 100vh;
     background-color: #fff8f1;
-    background-image: linear-gradient(rgba(50, 32, 20, 0.12), rgba(50, 32, 20, 0.12)), url("../images/table.jpg");
+    background-image: url("../images/table.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
