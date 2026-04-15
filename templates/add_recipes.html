@@ -37,36 +37,40 @@
                 <label for="recipe_description">Recipe Description</label>
             </div>
         </div>
-        <!-- Recipe image picker -->
+        <!-- Recipe image -->
         <div class="row">
             <div class="col s12">
-                <p class="orange-text text-darken-4"><i class="fas fa-image"></i> &nbsp;Choose Recipe Image</p>
-                <div class="image-picker">
+                <p class="orange-text text-darken-4"><i class="fas fa-image"></i> &nbsp;Choose a preset image or add your own</p>
+                <!-- Preset image picker -->
+                <div class="image-picker" id="image-picker">
+                    {% set presets = [
+                        ('images/grits.jpg', 'Grits'),
+                        ('images/harleymorse.jpg', 'Harley Morse'),
+                        ('images/palakpaneer.jpg', 'Palak Paneer'),
+                        ('images/pizza.jpg', 'Pizza'),
+                        ('images/steakpotatoes.jpg', 'Steak & Potatoes')
+                    ] %}
+                    {% for path, label in presets %}
                     <label class="image-picker__item">
-                        <input type="radio" name="image_url" value="{{ url_for('static', filename='images/grits.jpg') }}" required>
-                        <img src="{{ url_for('static', filename='images/grits.jpg') }}" alt="Grits">
-                        <span>Grits</span>
+                        <input type="radio" name="image_url" id="image_url" value="{{ url_for('static', filename=path) }}">
+                        <img src="{{ url_for('static', filename=path) }}" alt="{{ label }}">
+                        <span>{{ label }}</span>
                     </label>
-                    <label class="image-picker__item">
-                        <input type="radio" name="image_url" value="{{ url_for('static', filename='images/harleymorse.jpg') }}">
-                        <img src="{{ url_for('static', filename='images/harleymorse.jpg') }}" alt="Harley Morse">
-                        <span>Harley Morse</span>
+                    {% endfor %}
+                </div>
+                <!-- Custom image URL option -->
+                <div class="custom-image-toggle">
+                    <label>
+                        <input type="checkbox" id="use_custom_image" class="filled-in">
+                        <span>Use my own image URL instead</span>
                     </label>
-                    <label class="image-picker__item">
-                        <input type="radio" name="image_url" value="{{ url_for('static', filename='images/palakpaneer.jpg') }}">
-                        <img src="{{ url_for('static', filename='images/palakpaneer.jpg') }}" alt="Palak Paneer">
-                        <span>Palak Paneer</span>
-                    </label>
-                    <label class="image-picker__item">
-                        <input type="radio" name="image_url" value="{{ url_for('static', filename='images/pizza.jpg') }}">
-                        <img src="{{ url_for('static', filename='images/pizza.jpg') }}" alt="Pizza">
-                        <span>Pizza</span>
-                    </label>
-                    <label class="image-picker__item">
-                        <input type="radio" name="image_url" value="{{ url_for('static', filename='images/steakpotatoes.jpg') }}">
-                        <img src="{{ url_for('static', filename='images/steakpotatoes.jpg') }}" alt="Steak &amp; Potatoes">
-                        <span>Steak &amp; Potatoes</span>
-                    </label>
+                </div>
+                <div class="row" id="custom-image-row" style="display:none;">
+                    <div class="input-field col s12">
+                        <i class="fas fa-link prefix orange-text text-darken-4"></i>
+                        <input id="custom_image_url" type="url" placeholder="https://example.com/my-image.jpg">
+                        <label for="custom_image_url" class="active">Paste image URL</label>
+                    </div>
                 </div>
             </div>
         </div>

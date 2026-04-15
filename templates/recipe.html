@@ -27,7 +27,7 @@
         <li>
             <div class="collapsible-header white-text text-shadow recipe-list__header">
                 <div class="recipe-list__media">
-                    <img src="{{ recipe.image_url if recipe.image_url else url_for('static', filename='images/table.jpg') }}" alt="{{ recipe.recipe_name }}">
+                    <img src="{{ auto_image(recipe) }}" alt="{{ recipe.recipe_name }}">
                 </div>
                 <div class="recipe-list__summary">
                     <p class="recipe-list__meta">
@@ -48,7 +48,7 @@
                 </div>
             </div>
             <div class="collapsible-body recipe-list__body">
-                <img class="recipe-list__body-image" src="{{ recipe.image_url if recipe.image_url else url_for('static', filename='images/table.jpg') }}" alt="{{ recipe.recipe_name }}">
+                <img class="recipe-list__body-image" src="{{ auto_image(recipe) }}" alt="{{ recipe.recipe_name }}">
                 <p>{{ recipe.recipe_description }}</p>
                 <p><em>by: {{ recipe.created_by }}</em></p>
             </div>

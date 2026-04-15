@@ -126,6 +126,11 @@ main.container {
     text-align: center;
 }
 
+.custom-image-toggle {
+    margin-top: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
 .recipe-search-panel {
     background: rgba(255, 251, 247, 0.34) !important;
     backdrop-filter: blur(4px);

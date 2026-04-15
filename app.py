@@ -29,7 +29,27 @@ def utility_processor():
             version = 1
         return url_for("static", filename=filename, v=version)
 
-    return dict(static_versioned=static_versioned)
+    # Map known recipe names (lowercase keywords) to their static image path
+    KNOWN_IMAGES = {
+        "pizza": "images/pizza.jpg",
+        "grits": "images/grits.jpg",
+        "palak paneer": "images/palakpaneer.jpg",
+        "paneer": "images/palakpaneer.jpg",
+        "steak": "images/steakpotatoes.jpg",
+        "harley morse": "images/harleymorse.jpg",
+    }
+
+    def auto_image(recipe):
+        """Return image_url from DB, or auto-match by recipe name, or fallback."""
+        if recipe.get("image_url"):
+            return recipe["image_url"]
+        name = recipe.get("recipe_name", "").lower()
+        for keyword, path in KNOWN_IMAGES.items():
+            if keyword in name:
+                return url_for("static", filename=path)
+        return url_for("static", filename="images/table.jpg")
+
+    return dict(static_versioned=static_versioned, auto_image=auto_image)
 
 
 @app.route("/")

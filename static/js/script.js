@@ -16,6 +16,40 @@ $(document).ready(function () {
         }
     });
 
+    // Custom image URL toggle
+    $("#use_custom_image").on("change", function () {
+        if ($(this).is(":checked")) {
+            $("#custom-image-row").show();
+            // Deselect all preset radios and add a hidden radio for the custom URL
+            $("input[name='image_url']").prop("checked", false);
+        } else {
+            $("#custom-image-row").hide();
+            $("#custom_image_url_hidden").remove();
+        }
+    });
+
+    // On form submit, inject custom URL as the selected image_url if checkbox is checked
+    $("form").on("submit", function () {
+        if ($("#use_custom_image").is(":checked")) {
+            var customUrl = $("#custom_image_url").val().trim();
+            if (customUrl) {
+                $("input[name='image_url']").prop("checked", false);
+                if ($("#custom_image_url_hidden").length === 0) {
+                    $(this).append(
+                        $("<input>").attr({
+                            type: "hidden",
+                            id: "custom_image_url_hidden",
+                            name: "image_url",
+                            value: customUrl
+                        })
+                    );
+                } else {
+                    $("#custom_image_url_hidden").val(customUrl);
+                }
+            }
+        }
+    });
+
     validateMaterializeSelect();
     function validateMaterializeSelect() {
         let classValid = { "border-bottom": "1px solid #4caf50", "box-shadow": "0 1px 0 0 #4caf50" };

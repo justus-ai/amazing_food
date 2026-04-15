@@ -45,8 +45,8 @@
         <!-- Recipe image picker -->
         <div class="row">
             <div class="col s12">
-                <p class="orange-text text-darken-4"><i class="fas fa-image"></i> &nbsp;Choose Recipe Image</p>
-                <div class="image-picker">
+                <p class="orange-text text-darken-4"><i class="fas fa-image"></i> &nbsp;Choose a preset image or add your own</p>
+                <div class="image-picker" id="image-picker">
                     {% set images = [
                         ('images/grits.jpg', 'Grits'),
                         ('images/harleymorse.jpg', 'Harley Morse'),
@@ -54,15 +54,31 @@
                         ('images/pizza.jpg', 'Pizza'),
                         ('images/steakpotatoes.jpg', 'Steak & Potatoes')
                     ] %}
+                    {% set preset_paths = images | map(attribute=0) | list %}
                     {% for path, label in images %}
                     {% set full_url = url_for('static', filename=path) %}
                     <label class="image-picker__item">
                         <input type="radio" name="image_url" value="{{ full_url }}"
-                            {{ 'checked' if recipe.image_url == full_url else '' }}>
+                            {% if recipe.image_url and path in recipe.image_url %}checked{% endif %}>
                         <img src="{{ full_url }}" alt="{{ label }}">
                         <span>{{ label }}</span>
                     </label>
                     {% endfor %}
+                </div>
+                <!-- Custom image URL option -->
+                {% set is_custom = recipe.image_url and '/static/images/' not in recipe.image_url %}
+                <div class="custom-image-toggle">
+                    <label>
+                        <input type="checkbox" id="use_custom_image" class="filled-in" {{ 'checked' if is_custom else '' }}>
+                        <span>Use my own image URL instead</span>
+                    </label>
+                </div>
+                <div class="row" id="custom-image-row" style="{{ '' if is_custom else 'display:none;' }}">
+                    <div class="input-field col s12">
+                        <i class="fas fa-link prefix orange-text text-darken-4"></i>
+                        <input id="custom_image_url" type="url" value="{{ recipe.image_url if is_custom else '' }}" placeholder="https://example.com/my-image.jpg">
+                        <label for="custom_image_url" class="active">Paste image URL</label>
+                    </div>
                 </div>
             </div>
         </div>
@@ -71,7 +87,7 @@
             <div class="input-field col s12">
                 <i class="fas fa-calendar-alt prefix orange-text text-darken-4"></i>
                 <input id="due_date" name="due_date" type="text" value="{{ recipe.due_date }}" class="datepicker validate" required>
-                <label for="due_date"> Date Uploaded</label>
+                <label for="due_date" class="active"> Date Uploaded</label>
             </div>
         </div>
         <!-- is new -->
