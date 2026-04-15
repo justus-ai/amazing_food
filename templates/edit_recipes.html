@@ -42,6 +42,30 @@
                 <label for="recipe_description">Recipe Description</label>
             </div>
         </div>
+        <!-- Recipe image picker -->
+        <div class="row">
+            <div class="col s12">
+                <p class="orange-text text-darken-4"><i class="fas fa-image"></i> &nbsp;Choose Recipe Image</p>
+                <div class="image-picker">
+                    {% set images = [
+                        ('images/grits.jpg', 'Grits'),
+                        ('images/harleymorse.jpg', 'Harley Morse'),
+                        ('images/palakpaneer.jpg', 'Palak Paneer'),
+                        ('images/pizza.jpg', 'Pizza'),
+                        ('images/steakpotatoes.jpg', 'Steak & Potatoes')
+                    ] %}
+                    {% for path, label in images %}
+                    {% set full_url = url_for('static', filename=path) %}
+                    <label class="image-picker__item">
+                        <input type="radio" name="image_url" value="{{ full_url }}"
+                            {{ 'checked' if recipe.image_url == full_url else '' }}>
+                        <img src="{{ full_url }}" alt="{{ label }}">
+                        <span>{{ label }}</span>
+                    </label>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
         <!-- Due date -->
         <div class="row">
             <div class="input-field col s12">

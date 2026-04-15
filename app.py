@@ -18,6 +18,20 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+@app.context_processor
+def utility_processor():
+    def static_versioned(filename):
+        """Append file mtime so browsers refresh static assets after deploys."""
+        file_path = os.path.join(app.static_folder, filename)
+        try:
+            version = int(os.path.getmtime(file_path))
+        except OSError:
+            version = 1
+        return url_for("static", filename=filename, v=version)
+
+    return dict(static_versioned=static_versioned)
+
+
 @app.route("/")
 @app.route("/get_recipes")
 def get_recipes():
@@ -112,6 +126,7 @@ def add_recipe():
             "category_recipe": request.form.get("category_recipe"),
             "recipe_name": request.form.get("recipe_name"),
             "recipe_description": request.form.get("recipe_description"),
+            "image_url": request.form.get("image_url"),
             "is_urgent": is_urgent,
             "date_uploaded": request.form.get("due_date"),
             "created_by": session["user"]
@@ -131,6 +146,7 @@ def edit_recipe(recipe_id):
             "category_recipe": request.form.get("category_recipe"),
             "recipe_name": request.form.get("recipe_name"),
             "recipe_description": request.form.get("recipe_description"),
+            "image_url": request.form.get("image_url"),
             "is_urgent": is_urgent,
             "date_uploaded": request.form.get("due_date"),
             "created_by": session["user"]
@@ -144,7 +160,7 @@ def edit_recipe(recipe_id):
 
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
-    mongo.db.tasks.remove({"_id": ObjectId(recipe_id)})
+    mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe Successfully Deleted")
     return redirect(url_for("get_recipes"))
 

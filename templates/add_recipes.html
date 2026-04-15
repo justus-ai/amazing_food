@@ -37,6 +37,39 @@
                 <label for="recipe_description">Recipe Description</label>
             </div>
         </div>
+        <!-- Recipe image picker -->
+        <div class="row">
+            <div class="col s12">
+                <p class="orange-text text-darken-4"><i class="fas fa-image"></i> &nbsp;Choose Recipe Image</p>
+                <div class="image-picker">
+                    <label class="image-picker__item">
+                        <input type="radio" name="image_url" value="{{ url_for('static', filename='images/grits.jpg') }}" required>
+                        <img src="{{ url_for('static', filename='images/grits.jpg') }}" alt="Grits">
+                        <span>Grits</span>
+                    </label>
+                    <label class="image-picker__item">
+                        <input type="radio" name="image_url" value="{{ url_for('static', filename='images/harleymorse.jpg') }}">
+                        <img src="{{ url_for('static', filename='images/harleymorse.jpg') }}" alt="Harley Morse">
+                        <span>Harley Morse</span>
+                    </label>
+                    <label class="image-picker__item">
+                        <input type="radio" name="image_url" value="{{ url_for('static', filename='images/palakpaneer.jpg') }}">
+                        <img src="{{ url_for('static', filename='images/palakpaneer.jpg') }}" alt="Palak Paneer">
+                        <span>Palak Paneer</span>
+                    </label>
+                    <label class="image-picker__item">
+                        <input type="radio" name="image_url" value="{{ url_for('static', filename='images/pizza.jpg') }}">
+                        <img src="{{ url_for('static', filename='images/pizza.jpg') }}" alt="Pizza">
+                        <span>Pizza</span>
+                    </label>
+                    <label class="image-picker__item">
+                        <input type="radio" name="image_url" value="{{ url_for('static', filename='images/steakpotatoes.jpg') }}">
+                        <img src="{{ url_for('static', filename='images/steakpotatoes.jpg') }}" alt="Steak &amp; Potatoes">
+                        <span>Steak &amp; Potatoes</span>
+                    </label>
+                </div>
+            </div>
+        </div>
         <!-- Due date -->
         <div class="row">
             <div class="input-field col s12">
