@@ -8,6 +8,7 @@ AMAZING FOOD.
 <img width="1366" height="768" alt="Screenshot (900)" src="https://github.com/user-attachments/assets/13070016-a4d9-4623-b267-68f7b554e55e" />
 Responsive view:
 
+
 <img width="312" height="560" alt="Screenshot (901)" src="https://github.com/user-attachments/assets/7f891d70-8dce-402f-974f-f450d54828c0" />
 
 
@@ -29,29 +30,33 @@ a)Returning Visitor Goals
 
 5. There is a also  a newest button at the bottom of the page to be activated if one feels that their recipe is a newer version of a prexisting one or a previuosly nonexistant recipe.
 
+<img width="1366" height="768" alt="Screenshot (913)" src="https://github.com/user-attachments/assets/49dad125-ef37-4b18-8de0-13a7457f912b" />
+
+
 7. There is also a datepicker so that people who come on to the page to find recipes  can see when a particular recipe was uploaded.
+
+<img width="1366" height="768" alt="Screenshot (912)" src="https://github.com/user-attachments/assets/7eaa3175-4688-4f75-aa4a-66ba79cad2d1" />
+
 
 
 ## Admin page. 
 The admin user can login and has further options of adding , deleting and editing the categories section.
 
-<img width="1366" height="768" alt="Screenshot (907)" src="https://github.com/user-attachments/assets/b3e0f637-0047-42c3-a4a4-f7a05c049aa8" />
+<img width="1366" height="768" alt="Screenshot (914)" src="https://github.com/user-attachments/assets/6e707d80-59a8-4bf3-98f2-a340af57a718" />
 
 # DESIGN
 Colour Scheme
-The two main colours on Amazing Food are  white and  brown.The advantage of using brown color in food is its strong link to beneficial nutrients, particularly carotenoids like beta-carotene, which is converted to vitamin A. This color is associated with various health benefits, including improved vision and skin health, a boosted immune system
+The two main colours on Amazing Food are  white and  brown.The advantage of using brown color is that it matches with the background color which depicts a brown dining table that gives a welcoming effect just before a hot summer mealtime. The orange  color text is associated with various health benefits, including improved vision and skin health, a boosted immune system
 
 # FEATURES
 Responsive on all device sizes.
+The repsonsive menu turns into a hamburger icon in smaller screens. Upon clicking the hamburger icon, it becomes a dropdown with all the functions intact:
 
-There is also a repsonsive menu that turns into a hamburger icon in smaller screens. Upon clicking the hamburger icon, it becomes a dropdown with all the functions intact:
 
-
-Interactive elements
+## Interactive elements
 Techonologies used:
-
-MongoDB for back end
-render for launching the website
+1.MongoDB for back end
+2.render for launching the website
 
 # LANGUAGES USED
 HTML5
@@ -78,8 +83,7 @@ devtools.No errors when i checked on devtools
 # UNFIXED BUGS:
 none
 # FEATURES LEFT TO IMPLEMENT:
-In the future i would like to add a function where pictures alongside the recipe could be added when a user uploads the recipe.
-Also want ed to add the social media links at the bottom of ach page to link to facebook, instagram, pinterest and other social media to enrich UX.
+In the future i would like to have responsive and mving images and text to give the user a live in effect of a foood experience close to that of literally tasting it 
 
 # DEPLOYMENT
 This Project was deployed to render using the following steps, following steps:
