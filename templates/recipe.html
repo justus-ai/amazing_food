@@ -35,8 +35,8 @@
                 </div>
                 <strong>{{ recipe.recipe_name }}</strong> : {{ recipe.date_uploaded }}
                 {% if recipe.is_urgent == "on" %}
-                    <i class="fas fa-exclamation-circle deep-orange-text text-lighten-2 tooltipped"
-                        data-position="right" data-tooltip="NEWEST!"></i>
+                    <i class="fas fa-tag deep-orange-text text-lighten-2 tooltipped"
+                        data-position="right" data-tooltip="New"></i>
                 {% endif %}
             </div>
             <div class="collapsible-body">

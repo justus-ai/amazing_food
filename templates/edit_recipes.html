@@ -50,11 +50,11 @@
                 <label for="due_date"> Date Uploaded</label>
             </div>
         </div>
-        <!-- is Newest -->
+        <!-- is new -->
         <div class="row">
             <div class="input-field col s12">
                 <div class="switch">
-                    <i class="fas fa-exclamation-circle prefix orange-text text-darken-4"></i>
+                    <i class="fas fa-tag prefix orange-text text-darken-4"></i>
                     <label for="is_urgent">
                         {% if recipe.is_urgent == "on" %}
                             <input type="checkbox" id="is_urgent" name="is_urgent" checked>
@@ -62,7 +62,7 @@
                             <input type="checkbox" id="is_urgent" name="is_urgent">
                         {% endif %}
                         <span class="lever"></span>
-                        Newest!
+                        New
                     </label>
                 </div>
             </div>
