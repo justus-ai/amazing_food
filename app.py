@@ -100,14 +100,13 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
+    if "user" not in session:
+        flash("Please log in to view your profile")
+        return redirect(url_for("login"))
     # grab the session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-
-    if session["user"]:
-        return render_template("profile.html", username=username)
-
-    return redirect(url_for("login"))
+    return render_template("profile.html", username=username)
 
 
 @app.route("/logout")
@@ -120,6 +119,9 @@ def logout():
 
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
+    if "user" not in session:
+        flash("Please log in to add a recipe")
+        return redirect(url_for("login"))
     if request.method == "POST":
         is_urgent = "on" if request.form.get("is_urgent") else "off"
         recipe = {
@@ -140,6 +142,9 @@ def add_recipe():
 
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
+    if "user" not in session:
+        flash("Please log in to edit a recipe")
+        return redirect(url_for("login"))
     if request.method == "POST":
         is_urgent = "on" if request.form.get("is_urgent") else "off"
         submit = {
@@ -160,17 +165,26 @@ def edit_recipe(recipe_id):
 
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
+    if "user" not in session:
+        flash("Please log in to delete a recipe")
+        return redirect(url_for("login"))
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe Successfully Deleted")
     return redirect(url_for("get_recipes"))
 
 @app.route("/get_categories")
 def get_categories():
+    if "user" not in session or session["user"].lower() != "admin":
+        flash("You must be an admin to manage categories")
+        return redirect(url_for("get_recipes"))
     categories = list(mongo.db.categories.find().sort("category_recipe", 1))
     return render_template("categories.html", categories=categories)
 
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
+    if "user" not in session or session["user"].lower() != "admin":
+        flash("You must be an admin to add categories")
+        return redirect(url_for("get_recipes"))
     if request.method == "POST":
         category = {
             "category_recipe": request.form.get("category_recipe")
@@ -182,6 +196,9 @@ def add_category():
     return render_template("add_category.html")
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
+    if "user" not in session or session["user"].lower() != "admin":
+        flash("You must be an admin to edit categories")
+        return redirect(url_for("get_recipes"))
     if request.method == "POST":
         submit = {
             "category_recipe": request.form.get("category_recipe")
@@ -195,6 +212,9 @@ def edit_category(category_id):
 
 @app.route("/delete_category/<category_id>")
 def delete_category(category_id):
+    if "user" not in session or session["user"].lower() != "admin":
+        flash("You must be an admin to delete categories")
+        return redirect(url_for("get_recipes"))
     mongo.db.categories.remove({"_id": ObjectId(category_id)})
     flash("Category Successfully Deleted")
     return redirect(url_for("get_categories"))
