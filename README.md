@@ -22,6 +22,9 @@ a)Returning Visitor Goals
 
 1. The page has a register link that is easy for a first time user to sign up.More optons are thereafter displayed  add , delete, edit recipe .These functions are available for only registered users.
 <img width="1366" height="768" alt="Screenshot (905)" src="https://github.com/user-attachments/assets/a5e74917-3b36-4955-af45-4e62528c1347" />
+
+welcome page 
+
 <img width="1366" height="768" alt="Screenshot (907)" src="https://github.com/user-attachments/assets/8564f1e7-caf1-400c-b7e0-a0505cff1b4f" />
 
 
@@ -29,12 +32,12 @@ a)Returning Visitor Goals
 <img width="1366" height="768" alt="Screenshot (910)" src="https://github.com/user-attachments/assets/64faf54d-409e-4fb3-8a44-5c09ecec2f96" />
 
 
-5. There is a also  a newest button at the bottom of the page to be activated if one feels that their recipe is a newer version of a prexisting one or a previuosly nonexistant recipe.
+4. There is a also  a newest button at the bottom of the page to be activated if one feels that their recipe is a newer version of a prexisting one or a previuosly nonexistant recipe.
 
 <img width="1366" height="768" alt="Screenshot (913)" src="https://github.com/user-attachments/assets/49dad125-ef37-4b18-8de0-13a7457f912b" />
 
 
-7. There is also a datepicker so that people who come on to the page to find recipes  can see when a particular recipe was uploaded.
+5. There is also a datepicker so that people who come on to the page to find recipes  can see when a particular recipe was uploaded.
 
 <img width="1366" height="768" alt="Screenshot (912)" src="https://github.com/user-attachments/assets/7eaa3175-4688-4f75-aa4a-66ba79cad2d1" />
 
