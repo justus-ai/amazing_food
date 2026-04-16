@@ -6,6 +6,7 @@ AMAZING FOOD.
 1.First Time Visitor Goals
 
 <img width="1366" height="768" alt="Screenshot (900)" src="https://github.com/user-attachments/assets/13070016-a4d9-4623-b267-68f7b554e55e" />
+
 Responsive view:
 
 
